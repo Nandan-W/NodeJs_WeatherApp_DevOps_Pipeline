@@ -8,7 +8,9 @@ const WeatherApp = () => {
 
   const fetchWeather = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/weather/${city}`);
+      // const response = await axios.get(`http://localhost:5000/api/weather/${city}`);
+      console.log("sending request to ", `${process.env.REACT_APP_API_URL}/${city}`);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/${city}`);
 
       console.log("response = ", response);
       setWeatherData(response.data);
