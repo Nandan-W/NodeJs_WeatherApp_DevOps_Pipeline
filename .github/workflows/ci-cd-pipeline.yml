@@ -43,7 +43,7 @@ jobs:
       with:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        region: ap-south-1
+        aws-region: ap-south-1
 
     # Step 7: Configuring kubectl to interact with EKS cluster
     - name: Configure kubectl
